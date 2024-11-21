@@ -1,0 +1,13 @@
+.Body{
+    display: flex;
+    justify-content: center;
+}
+
+.App{
+    width: 1080px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

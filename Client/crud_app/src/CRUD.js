@@ -1,12 +1,12 @@
-import React, {useState, useEffect, useMemo} from 'react';
+import React, {useState, useEffect} from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import Table from 'react-bootstrap/Table';
+import StudentsTable from './StudentsTable';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 import { Fragment } from 'react';
 import "bootstrap/dist/css/bootstrap.css";
-import './CRUD.css';
+import './styles/CRUD.css';
 import Modal from 'react-bootstrap/Modal';
 
 export default function CRUD(){
@@ -127,34 +127,7 @@ export default function CRUD(){
                 <br/>
             </Form>
             
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>IsActive</th>
-                        <th>Id</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {StudentData.map((student, index) =>(
-                        <tr key={index}>
-                            <td>{index+1}</td>
-                            <td>{student.name}</td>
-                            <td>{student.description}</td>
-                            <td>{student.isActive? 'Yes' : 'No'}</td>
-                            <td>{student.id}</td>
-                            <td>
-                                <Button variant="outline-primary" onClick={() => handleEditStudent(student)}>Edit</Button>
-                            </td>
-                            <td>
-                                <Button variant="outline-danger" onClick={() => DeleteStudent(student.id)}>Delete</Button>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </Table>
+            <StudentsTable data={StudentData} onEdit={handleEditStudent} onDelete={DeleteStudent} />
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>

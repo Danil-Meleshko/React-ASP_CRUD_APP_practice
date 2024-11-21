@@ -1,11 +1,17 @@
-import './App.css';
+import './styles/App.css';
 import CRUD from './CRUD';
+import Header from './Header';
 
 function App() {
   return (
-    <div className="App">
-      <CRUD />
-    </div>
+    <>
+      <Header />
+      <div className='Body'>
+        <div className="App">
+          <CRUD />
+        </div>
+      </div>
+    </>
   );
 }
 
