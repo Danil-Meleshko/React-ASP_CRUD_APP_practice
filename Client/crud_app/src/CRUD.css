@@ -1,0 +1,12 @@
+Form{
+    width: 650px;
+    margin: 20px;
+}
+
+.modal-body Form{
+    width: 90%;
+}
+
+.table{
+    width: 100%;
+}
