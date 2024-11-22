@@ -9,12 +9,13 @@ export default function Header(){
             <Navbar bg="primary" data-bs-theme="dark" expand="lg">
                 <Container>
                     {/* Brand section */}
-                    <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
+                    <Navbar.Brand href="/">Navbar with text</Navbar.Brand>
 
                     {/* Links next to the brand */}
                     <Nav className="me-auto">
                         <Nav.Link href="#Notification">Notification</Nav.Link>
                         <Nav.Link href="#Forum">Forum</Nav.Link>
+                        <Nav.Link href="/Training">Training</Nav.Link>
                     </Nav>
 
                     {/* Toggle for mobile view */}
