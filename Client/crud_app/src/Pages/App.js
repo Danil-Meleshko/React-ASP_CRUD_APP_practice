@@ -1,7 +1,6 @@
-import './styles/App.css';
-import CRUD from './CRUD';
-import Header from './Header';
-import Training from './Training';
+import '../styles/App.css';
+import CRUD from '../Elements/CRUD';
+import Header from '../Elements/Header';
 
 function App() {
   return (

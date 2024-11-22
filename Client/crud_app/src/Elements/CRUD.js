@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 import { Fragment } from 'react';
 import "bootstrap/dist/css/bootstrap.css";
-import './styles/CRUD.css';
+import '../styles/CRUD.css';
 import Modal from 'react-bootstrap/Modal';
 
 export default function CRUD(){

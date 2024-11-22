@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import Header from './Header';
+import Header from '../Elements/Header';
 
 export default function Training(){
     const [someData, setSomeData] = useState({
