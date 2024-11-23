@@ -32,7 +32,7 @@ export default function CRUD(){
     }, []);
 
     const getData = () =>{
-        axios.get("https://localhost:7023/api/Students")
+        axios.get("http://localhost:5063/api/Students")
         .then((res) => {
             setStudentData(res.data);
         })
@@ -43,7 +43,7 @@ export default function CRUD(){
 
     function DeleteStudent(id){
         if(window.confirm("Are you sure you want to delete")){
-            axios.delete(`https://localhost:7023/api/Students/${id}`)
+            axios.delete(`http://localhost:5063/api/Students/${id}`)
             .then(() =>{
                 getData();
             })
@@ -79,7 +79,7 @@ export default function CRUD(){
 
         if (isEditing) {
             // Update existing student
-            axios.put(`https://localhost:7023/api/Students/${studentId}`, student)
+            axios.put(`http://localhost:5063/api/Students/${studentId}`, student)
                 .then(() => {
                     getData();
                     handleClose();
@@ -87,7 +87,7 @@ export default function CRUD(){
                 .catch((err) => console.error("Error updating student:", err));
         } else {
             // Add new student
-            axios.post("https://localhost:7023/api/Students", student)
+            axios.post("http://localhost:5063/api/Students", student)
                 .then(() => {
                     getData();
                     clearForm();
