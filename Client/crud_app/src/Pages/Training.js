@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import Header from '../Elements/Header';
+import Header from '../Components/Header';
 
 function CountInitial(){
     console.log("Initial count: 0");

@@ -9,6 +9,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import '../styles/CRUD.css';
 import Modal from 'react-bootstrap/Modal';
 
+export const TableMethods = React.createContext();
+
 export default function CRUD(){
     const [studentId, setStudentId] = useState('');
     const [studentName, setStudentName] = useState('');
@@ -127,7 +129,9 @@ export default function CRUD(){
                 <br/>
             </Form>
             
-            <StudentsTable data={StudentData} onEdit={handleEditStudent} onDelete={DeleteStudent} />
+            <TableMethods.Provider value={{ StudentData, handleEditStudent, DeleteStudent }}>
+                <StudentsTable/>
+            </TableMethods.Provider>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>

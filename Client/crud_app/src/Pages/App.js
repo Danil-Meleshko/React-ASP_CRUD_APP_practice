@@ -1,6 +1,6 @@
 import '../styles/App.css';
-import CRUD from '../Elements/CRUD';
-import Header from '../Elements/Header';
+import CRUD from '../Components/CRUD';
+import Header from '../Components/Header';
 
 function App() {
   return (
